@@ -1,4 +1,4 @@
-# GCP Project Module
+# GCP Private GKE Module
 
 ## Description
 
