@@ -68,3 +68,12 @@ variable "node_pools" {
   type        = list(map(string))
   description = "List of maps containing node pools"
 }
+
+variable "private_endpoint" {
+  description = "Enable private endpoint, default is disabled"
+  default     = false
+}
+
+variable "istio_disabled" {
+  default = true
+}

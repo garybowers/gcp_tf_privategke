@@ -150,7 +150,7 @@ resource "google_container_cluster" "gke" {
   }
 
   private_cluster_config {
-    enable_private_endpoint = "true"
+    enable_private_endpoint = var.private_endpoint
     enable_private_nodes    = "true"
     master_ipv4_cidr_block  = var.master_ipv4_cidr_block
   }
@@ -175,7 +175,7 @@ resource "google_container_cluster" "gke" {
 
   addons_config {
     istio_config {
-      disabled = true
+      disabled = var.istio_disabled
       auth     = "AUTH_MUTUAL_TLS"
     }
 
